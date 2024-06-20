@@ -1,0 +1,364 @@
+2023-11-07 18:18:02,012 - root - INFO - 创建日志文件...
+2023-11-07 18:18:02,014 - root - INFO - 创建 scDMLModel 对象完成...
+2023-11-07 18:18:02,039 - root - INFO - 正在执行 preprocess() 函数...
+2023-11-07 18:18:02,042 - root - INFO - 模式=unsupervised
+2023-11-07 18:18:02,044 - root - INFO - 聚类方法=louvain
+2023-11-07 18:18:02,046 - root - INFO - 分辨率=3.0
+2023-11-07 18:18:02,048 - root - INFO - 批次键=BATCH
+2023-11-07 18:18:02,049 - root - INFO - Normalize counts per cell(sum=10000.0)
+2023-11-07 18:18:02,077 - root - INFO - Log1p data
+2023-11-07 18:18:02,123 - root - INFO - Select HVG(n_top_genes=1000)
+2023-11-07 18:18:02,279 - root - INFO - Scale batch(scale_value=10.0)
+2023-11-07 18:18:02,616 - root - INFO - Calculate PCA(n_comps=100)
+2023-11-07 18:18:07,416 - root - INFO - Apply louvain clustring(resolution=3.0) initization
+2023-11-07 18:18:07,420 - root - INFO - Number of Cluster =25
+2023-11-07 18:18:07,424 - root - INFO - clusters=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+2023-11-07 18:18:07,428 - root - INFO - 预处理数据集完成。
+2023-11-07 18:18:27,241 - root - INFO - K_in=5, K_bw=10
+2023-11-07 18:18:27,243 - root - INFO - 开始计算 KNN 和 MNN 以获取簇之间的相似性。
+2023-11-07 18:18:27,246 - root - INFO - 使用近似方法计算每个批次内的 KNN 对...
+2023-11-07 18:18:27,254 - root - INFO - Calculate KNN pair intra batch...........
+2023-11-07 18:18:27,257 - root - INFO - K=5
+2023-11-07 18:18:27,259 - root - INFO - metric=cosine
+2023-11-07 18:18:27,262 - root - INFO - Processing datasets: (0, 0) = ('spk', 'spk')
+2023-11-07 18:18:27,534 - root - INFO - There are (17828) KNN pairs when processing (0, 0)=('spk', 'spk')
+2023-11-07 18:18:27,536 - root - INFO - Processing datasets: (1, 1) = ('vis', 'vis')
+2023-11-07 18:18:27,872 - root - INFO - There are (20692) KNN pairs when processing (1, 1)=('vis', 'vis')
+2023-11-07 18:18:27,874 - root - INFO - Processing datasets: (2, 2) = ('wal', 'wal')
+2023-11-07 18:18:28,316 - root - INFO - There are (25026) KNN pairs when processing (2, 2)=('wal', 'wal')
+2023-11-07 18:18:28,318 - root - INFO - scDML finds (63546) KNN pairs in dataset finally
+2023-11-07 18:18:28,370 - root - INFO - 使用近似方法计算批次之间的 MNN 对...
+2023-11-07 18:18:28,377 - root - INFO - Calculate MNN pair inter batch...........
+2023-11-07 18:18:28,379 - root - INFO - K=10
+2023-11-07 18:18:28,381 - root - INFO - metric=cosine
+2023-11-07 18:18:28,384 - root - INFO - Processing datasets: (0, 1) = ('spk', 'vis')
+2023-11-07 18:18:28,686 - root - INFO - There are (11350) MNN pairs when processing (0, 1)=('spk', 'vis')
+2023-11-07 18:18:28,688 - root - INFO - Processing datasets: (0, 2) = ('spk', 'wal')
+2023-11-07 18:18:29,038 - root - INFO - There are (13676) MNN pairs when processing (0, 2)=('spk', 'wal')
+2023-11-07 18:18:29,040 - root - INFO - Processing datasets: (1, 2) = ('vis', 'wal')
+2023-11-07 18:18:29,427 - root - INFO - There are (13604) MNN pairs when processing (1, 2)=('vis', 'wal')
+2023-11-07 18:18:29,429 - root - INFO - scDML finds (38630) MNN pairs in dataset finally
+2023-11-07 18:18:29,462 - root - INFO - 查找所有最近邻居完成。
+2023-11-07 18:18:29,464 - root - INFO - 计算簇之间的相似性矩阵。
+2023-11-07 18:18:29,559 - root - INFO - delete inner edge which link same cluster
+2023-11-07 18:18:29,562 - root - INFO - 12582 knn pair in batch link different cluster
+2023-11-07 18:18:29,647 - root - INFO - delete inner edge which link same cluster
+2023-11-07 18:18:29,650 - root - INFO - 36644 mnn pair in batch link different cluster
+2023-11-07 18:18:29,653 - root - INFO - ===================================================================================
+2023-11-07 18:18:29,655 - root - INFO - NN pair ratio(number of MNN pairs/number of KNN pairs)=2.91241456048323
+2023-11-07 18:18:29,658 - root - INFO - ===================================================================================
+2023-11-07 18:18:29,664 - root - INFO - 将相似性矩阵保存到文件中...
+2023-11-07 18:18:29,669 - root - INFO - 将 nn 配对矩阵保存到文件中。
+2023-11-07 18:18:29,674 - root - INFO - 完成相似性矩阵计算。
+2023-11-07 18:18:30,515 - root - INFO - scDML merge cluster with rule2....
+2023-11-07 18:18:30,519 - root - INFO - merge_rule2....
+2023-11-07 18:18:30,725 - root - INFO - merging cluster set:[{1}, {8}, {11}, {15}, {23}, {0, 4, 5, 12, 18, 20}, {3, 7, 13, 14, 16, 17, 19, 21}, {10, 22}, {24, 9}, {2, 6}]
+2023-11-07 18:18:30,729 - root - INFO - merge_rule2....
+2023-11-07 18:18:30,938 - root - INFO - merging cluster set:[{1}, {11}, {15}, {23}, {0, 4, 5, 12, 18, 20}, {3, 7, 13, 14, 16, 17, 19, 21}, {24, 9}, {2, 6, 8, 10, 22}]
+2023-11-07 18:18:30,941 - root - INFO - merge_rule2....
+2023-11-07 18:18:31,164 - root - INFO - merging cluster set:[{11}, {15}, {0, 4, 5, 12, 18, 20}, {3, 7, 13, 14, 16, 17, 19, 21}, {24, 9}, {1, 2, 6, 8, 10, 22, 23}]
+2023-11-07 18:18:31,168 - root - INFO - merge_rule2....
+2023-11-07 18:18:31,410 - root - INFO - merging cluster set:[{11}, {0, 4, 5, 12, 18, 20}, {3, 7, 13, 14, 16, 17, 19, 21}, {1, 2, 6, 8, 9, 10, 15, 22, 23, 24}]
+2023-11-07 18:18:31,414 - root - INFO - merge_rule2....
+2023-11-07 18:18:31,657 - root - INFO - merging cluster set:[{0, 4, 5, 12, 18, 20}, {3, 7, 13, 14, 16, 17, 19, 21}, {1, 2, 6, 8, 9, 10, 11, 15, 22, 23, 24}]
+2023-11-07 18:18:31,765 - root - INFO - 为scDML培训构建嵌入网络
+2023-11-07 18:18:31,772 - root - INFO - EmbeddingNet(
+  (actn): ReLU()
+  (fc): Sequential(
+    (0): Linear(in_features=1000, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=32, bias=True)
+  )
+)
+2023-11-07 18:18:31,775 - root - INFO - 构建嵌入网络完成…
+2023-11-07 18:18:31,801 - root - INFO - expect_num_cluster为None，使用特征值差距来估计细胞类型......的数量 
+2023-11-07 18:18:32,269 - root - INFO - 最优簇数是 [ 3  4  6  8 12]
+2023-11-07 18:18:32,272 - root - INFO - train scDML(expect_num_cluster=3) with Embedding Net
+2023-11-07 18:18:32,274 - root - INFO - expect_num_cluster=3
+2023-11-07 18:18:32,276 - root - INFO - 利用CPU训练模型
+2023-11-07 18:18:32,282 - root - INFO - use euclidean distance and hard triplet to train model
+2023-11-07 18:18:32,284 - root - INFO - not use earlystopping!!!!
+2023-11-07 18:18:33,478 - root - INFO - epoch=1,number_hard_triplet=48733,loss=1623.9796142578125
+2023-11-07 18:18:34,503 - root - INFO - epoch=2,number_hard_triplet=4898,loss=2510.22216796875
+2023-11-07 18:18:35,417 - root - INFO - epoch=3,number_hard_triplet=1670,loss=1725.7923583984375
+2023-11-07 18:18:36,301 - root - INFO - epoch=4,number_hard_triplet=562,loss=1354.1719970703125
+2023-11-07 18:18:37,179 - root - INFO - epoch=5,number_hard_triplet=197,loss=922.2324829101562
+2023-11-07 18:18:38,061 - root - INFO - epoch=6,number_hard_triplet=214,loss=859.4785766601562
+2023-11-07 18:18:38,933 - root - INFO - epoch=7,number_hard_triplet=112,loss=839.6077270507812
+2023-11-07 18:18:39,800 - root - INFO - epoch=8,number_hard_triplet=120,loss=803.1473388671875
+2023-11-07 18:18:40,677 - root - INFO - epoch=9,number_hard_triplet=155,loss=1230.6549072265625
+2023-11-07 18:18:41,535 - root - INFO - epoch=10,number_hard_triplet=36,loss=441.375244140625
+2023-11-07 18:18:42,397 - root - INFO - epoch=11,number_hard_triplet=34,loss=701.7846069335938
+2023-11-07 18:18:43,267 - root - INFO - epoch=12,number_hard_triplet=178,loss=1492.0323486328125
+2023-11-07 18:18:44,125 - root - INFO - epoch=13,number_hard_triplet=32,loss=565.7816162109375
+2023-11-07 18:18:44,994 - root - INFO - epoch=14,number_hard_triplet=27,loss=744.6895751953125
+2023-11-07 18:18:45,853 - root - INFO - epoch=15,number_hard_triplet=25,loss=477.0552978515625
+2023-11-07 18:18:46,717 - root - INFO - epoch=16,number_hard_triplet=14,loss=355.4226379394531
+2023-11-07 18:18:47,585 - root - INFO - epoch=17,number_hard_triplet=29,loss=1047.4208984375
+2023-11-07 18:18:48,460 - root - INFO - epoch=18,number_hard_triplet=22,loss=797.3327026367188
+2023-11-07 18:18:49,318 - root - INFO - epoch=19,number_hard_triplet=76,loss=747.5054321289062
+2023-11-07 18:18:50,178 - root - INFO - epoch=20,number_hard_triplet=18,loss=587.4256591796875
+2023-11-07 18:18:51,050 - root - INFO - epoch=21,number_hard_triplet=64,loss=1110.81884765625
+2023-11-07 18:18:51,914 - root - INFO - epoch=22,number_hard_triplet=19,loss=899.0145263671875
+2023-11-07 18:18:52,775 - root - INFO - epoch=23,number_hard_triplet=56,loss=897.4959716796875
+2023-11-07 18:18:53,636 - root - INFO - epoch=24,number_hard_triplet=38,loss=266.985107421875
+2023-11-07 18:18:54,494 - root - INFO - epoch=25,number_hard_triplet=5,loss=226.97169494628906
+2023-11-07 18:18:55,357 - root - INFO - epoch=26,number_hard_triplet=46,loss=1405.8914794921875
+2023-11-07 18:18:56,212 - root - INFO - epoch=27,number_hard_triplet=11,loss=476.3122863769531
+2023-11-07 18:18:57,069 - root - INFO - epoch=28,number_hard_triplet=102,loss=1087.84326171875
+2023-11-07 18:18:57,931 - root - INFO - epoch=29,number_hard_triplet=10,loss=493.8489685058594
+2023-11-07 18:18:58,800 - root - INFO - epoch=30,number_hard_triplet=8,loss=685.8397827148438
+2023-11-07 18:18:59,658 - root - INFO - epoch=31,number_hard_triplet=10,loss=271.2673034667969
+2023-11-07 18:19:00,521 - root - INFO - epoch=32,number_hard_triplet=42,loss=1318.4395751953125
+2023-11-07 18:19:01,379 - root - INFO - epoch=33,number_hard_triplet=4,loss=110.18538665771484
+2023-11-07 18:19:02,240 - root - INFO - epoch=34,number_hard_triplet=8,loss=621.9491577148438
+2023-11-07 18:19:03,095 - root - INFO - epoch=35,number_hard_triplet=1,loss=101.3739242553711
+2023-11-07 18:19:03,968 - root - INFO - epoch=36,number_hard_triplet=23,loss=1143.940185546875
+2023-11-07 18:19:04,817 - root - INFO - epoch=37,number_hard_triplet=1,loss=0.8995605707168579
+2023-11-07 18:19:05,681 - root - INFO - epoch=38,number_hard_triplet=3,loss=351.30999755859375
+2023-11-07 18:19:06,541 - root - INFO - epoch=39,number_hard_triplet=27,loss=1233.7413330078125
+2023-11-07 18:19:07,401 - root - INFO - epoch=40,number_hard_triplet=2,loss=360.12823486328125
+2023-11-07 18:19:08,259 - root - INFO - epoch=41,number_hard_triplet=256,loss=1430.3045654296875
+2023-11-07 18:19:09,131 - root - INFO - epoch=42,number_hard_triplet=41,loss=1269.353515625
+2023-11-07 18:19:09,993 - root - INFO - epoch=43,number_hard_triplet=36,loss=1895.9034423828125
+2023-11-07 18:19:10,849 - root - INFO - epoch=44,number_hard_triplet=66,loss=1135.6851806640625
+2023-11-07 18:19:11,712 - root - INFO - epoch=45,number_hard_triplet=3,loss=116.11577606201172
+2023-11-07 18:19:12,603 - root - INFO - epoch=46,number_hard_triplet=3,loss=707.331787109375
+2023-11-07 18:19:13,456 - root - INFO - epoch=47,number_hard_triplet=11,loss=1059.46044921875
+2023-11-07 18:19:14,322 - root - INFO - epoch=48,number_hard_triplet=8,loss=908.7730712890625
+2023-11-07 18:19:15,185 - root - INFO - epoch=49,number_hard_triplet=12,loss=1225.6124267578125
+2023-11-07 18:19:16,038 - root - INFO - epoch=50,number_hard_triplet=5,loss=601.6329956054688
+2023-11-07 18:19:16,895 - root - INFO - epoch=51,number_hard_triplet=8,loss=636.313720703125
+2023-11-07 18:19:17,760 - root - INFO - epoch=52,number_hard_triplet=1,loss=37.965232849121094
+2023-11-07 18:19:18,617 - root - INFO - epoch=53,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:19,463 - root - INFO - epoch=54,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:20,316 - root - INFO - epoch=55,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:21,200 - root - INFO - epoch=56,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:22,248 - root - INFO - epoch=57,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:23,709 - root - INFO - epoch=58,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:24,828 - root - INFO - epoch=59,number_hard_triplet=4,loss=647.2361450195312
+2023-11-07 18:19:25,721 - root - INFO - epoch=60,number_hard_triplet=11,loss=1193.563720703125
+2023-11-07 18:19:26,576 - root - INFO - epoch=61,number_hard_triplet=2,loss=484.0052490234375
+2023-11-07 18:19:27,426 - root - INFO - epoch=62,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:28,275 - root - INFO - epoch=63,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:29,150 - root - INFO - epoch=64,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:30,068 - root - INFO - epoch=65,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:31,045 - root - INFO - epoch=66,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:32,390 - root - INFO - epoch=67,number_hard_triplet=3,loss=679.978759765625
+2023-11-07 18:19:33,251 - root - INFO - epoch=68,number_hard_triplet=35,loss=2166.515380859375
+2023-11-07 18:19:34,106 - root - INFO - epoch=69,number_hard_triplet=50,loss=3568.8955078125
+2023-11-07 18:19:34,959 - root - INFO - epoch=70,number_hard_triplet=15,loss=572.5191040039062
+2023-11-07 18:19:35,821 - root - INFO - epoch=71,number_hard_triplet=7,loss=781.7490234375
+2023-11-07 18:19:36,678 - root - INFO - epoch=72,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:37,531 - root - INFO - epoch=73,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:38,388 - root - INFO - epoch=74,number_hard_triplet=21,loss=1124.88330078125
+2023-11-07 18:19:39,256 - root - INFO - epoch=75,number_hard_triplet=13,loss=2118.336669921875
+2023-11-07 18:19:40,116 - root - INFO - epoch=76,number_hard_triplet=14,loss=880.712158203125
+2023-11-07 18:19:40,988 - root - INFO - epoch=77,number_hard_triplet=2,loss=396.0038146972656
+2023-11-07 18:19:41,852 - root - INFO - epoch=78,number_hard_triplet=2,loss=1300.614013671875
+2023-11-07 18:19:42,707 - root - INFO - epoch=79,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:43,565 - root - INFO - epoch=80,number_hard_triplet=2,loss=801.747802734375
+2023-11-07 18:19:44,432 - root - INFO - epoch=81,number_hard_triplet=31,loss=2919.919189453125
+2023-11-07 18:19:45,289 - root - INFO - epoch=82,number_hard_triplet=2,loss=461.78497314453125
+2023-11-07 18:19:46,142 - root - INFO - epoch=83,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:46,994 - root - INFO - epoch=84,number_hard_triplet=12,loss=307.753662109375
+2023-11-07 18:19:47,851 - root - INFO - epoch=85,number_hard_triplet=1,loss=48.374900817871094
+2023-11-07 18:19:48,716 - root - INFO - epoch=86,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:49,571 - root - INFO - epoch=87,number_hard_triplet=3,loss=857.640625
+2023-11-07 18:19:50,433 - root - INFO - epoch=88,number_hard_triplet=11,loss=1576.5316162109375
+2023-11-07 18:19:51,291 - root - INFO - epoch=89,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:52,148 - root - INFO - epoch=90,number_hard_triplet=1,loss=46.891990661621094
+2023-11-07 18:19:53,027 - root - INFO - epoch=91,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:53,983 - root - INFO - epoch=92,number_hard_triplet=2,loss=851.7546997070312
+2023-11-07 18:19:54,842 - root - INFO - epoch=93,number_hard_triplet=6,loss=604.9617309570312
+2023-11-07 18:19:55,699 - root - INFO - epoch=94,number_hard_triplet=13,loss=2902.26904296875
+2023-11-07 18:19:56,554 - root - INFO - epoch=95,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:57,414 - root - INFO - epoch=96,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:58,270 - root - INFO - epoch=97,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:59,137 - root - INFO - epoch=98,number_hard_triplet=0,loss=0.0
+2023-11-07 18:20:00,121 - root - INFO - epoch=99,number_hard_triplet=0,loss=0.0
+2023-11-07 18:20:01,377 - root - INFO - epoch=100,number_hard_triplet=3,loss=703.311767578125
+2023-11-07 18:20:01,379 - root - INFO - scDML training done....
+2023-11-07 18:20:01,381 - root - INFO - extract embedding for dataset with trained network
+ 2023-11-07 18:18:02,012 - root - INFO - 创建日志文件...
+2023-11-07 18:18:02,014 - root - INFO - 创建 scDMLModel 对象完成...
+2023-11-07 18:18:02,039 - root - INFO - 正在执行 preprocess() 函数...
+2023-11-07 18:18:02,042 - root - INFO - 模式=unsupervised
+2023-11-07 18:18:02,044 - root - INFO - 聚类方法=louvain
+2023-11-07 18:18:02,046 - root - INFO - 分辨率=3.0
+2023-11-07 18:18:02,048 - root - INFO - 批次键=BATCH
+2023-11-07 18:18:02,049 - root - INFO - Normalize counts per cell(sum=10000.0)
+2023-11-07 18:18:02,077 - root - INFO - Log1p data
+2023-11-07 18:18:02,123 - root - INFO - Select HVG(n_top_genes=1000)
+2023-11-07 18:18:02,279 - root - INFO - Scale batch(scale_value=10.0)
+2023-11-07 18:18:02,616 - root - INFO - Calculate PCA(n_comps=100)
+2023-11-07 18:18:07,416 - root - INFO - Apply louvain clustring(resolution=3.0) initization
+2023-11-07 18:18:07,420 - root - INFO - Number of Cluster =25
+2023-11-07 18:18:07,424 - root - INFO - clusters=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+2023-11-07 18:18:07,428 - root - INFO - 预处理数据集完成。
+2023-11-07 18:18:27,241 - root - INFO - K_in=5, K_bw=10
+2023-11-07 18:18:27,243 - root - INFO - 开始计算 KNN 和 MNN 以获取簇之间的相似性。
+2023-11-07 18:18:27,246 - root - INFO - 使用近似方法计算每个批次内的 KNN 对...
+2023-11-07 18:18:27,254 - root - INFO - Calculate KNN pair intra batch...........
+2023-11-07 18:18:27,257 - root - INFO - K=5
+2023-11-07 18:18:27,259 - root - INFO - metric=cosine
+2023-11-07 18:18:27,262 - root - INFO - Processing datasets: (0, 0) = ('spk', 'spk')
+2023-11-07 18:18:27,534 - root - INFO - There are (17828) KNN pairs when processing (0, 0)=('spk', 'spk')
+2023-11-07 18:18:27,536 - root - INFO - Processing datasets: (1, 1) = ('vis', 'vis')
+2023-11-07 18:18:27,872 - root - INFO - There are (20692) KNN pairs when processing (1, 1)=('vis', 'vis')
+2023-11-07 18:18:27,874 - root - INFO - Processing datasets: (2, 2) = ('wal', 'wal')
+2023-11-07 18:18:28,316 - root - INFO - There are (25026) KNN pairs when processing (2, 2)=('wal', 'wal')
+2023-11-07 18:18:28,318 - root - INFO - scDML finds (63546) KNN pairs in dataset finally
+2023-11-07 18:18:28,370 - root - INFO - 使用近似方法计算批次之间的 MNN 对...
+2023-11-07 18:18:28,377 - root - INFO - Calculate MNN pair inter batch...........
+2023-11-07 18:18:28,379 - root - INFO - K=10
+2023-11-07 18:18:28,381 - root - INFO - metric=cosine
+2023-11-07 18:18:28,384 - root - INFO - Processing datasets: (0, 1) = ('spk', 'vis')
+2023-11-07 18:18:28,686 - root - INFO - There are (11350) MNN pairs when processing (0, 1)=('spk', 'vis')
+2023-11-07 18:18:28,688 - root - INFO - Processing datasets: (0, 2) = ('spk', 'wal')
+2023-11-07 18:18:29,038 - root - INFO - There are (13676) MNN pairs when processing (0, 2)=('spk', 'wal')
+2023-11-07 18:18:29,040 - root - INFO - Processing datasets: (1, 2) = ('vis', 'wal')
+2023-11-07 18:18:29,427 - root - INFO - There are (13604) MNN pairs when processing (1, 2)=('vis', 'wal')
+2023-11-07 18:18:29,429 - root - INFO - scDML finds (38630) MNN pairs in dataset finally
+2023-11-07 18:18:29,462 - root - INFO - 查找所有最近邻居完成。
+2023-11-07 18:18:29,464 - root - INFO - 计算簇之间的相似性矩阵。
+2023-11-07 18:18:29,559 - root - INFO - delete inner edge which link same cluster
+2023-11-07 18:18:29,562 - root - INFO - 12582 knn pair in batch link different cluster
+2023-11-07 18:18:29,647 - root - INFO - delete inner edge which link same cluster
+2023-11-07 18:18:29,650 - root - INFO - 36644 mnn pair in batch link different cluster
+2023-11-07 18:18:29,653 - root - INFO - ===================================================================================
+2023-11-07 18:18:29,655 - root - INFO - NN pair ratio(number of MNN pairs/number of KNN pairs)=2.91241456048323
+2023-11-07 18:18:29,658 - root - INFO - ===================================================================================
+2023-11-07 18:18:29,664 - root - INFO - 将相似性矩阵保存到文件中...
+2023-11-07 18:18:29,669 - root - INFO - 将 nn 配对矩阵保存到文件中。
+2023-11-07 18:18:29,674 - root - INFO - 完成相似性矩阵计算。
+2023-11-07 18:18:30,515 - root - INFO - scDML merge cluster with rule2....
+2023-11-07 18:18:30,519 - root - INFO - merge_rule2....
+2023-11-07 18:18:30,725 - root - INFO - merging cluster set:[{1}, {8}, {11}, {15}, {23}, {0, 4, 5, 12, 18, 20}, {3, 7, 13, 14, 16, 17, 19, 21}, {10, 22}, {24, 9}, {2, 6}]
+2023-11-07 18:18:30,729 - root - INFO - merge_rule2....
+2023-11-07 18:18:30,938 - root - INFO - merging cluster set:[{1}, {11}, {15}, {23}, {0, 4, 5, 12, 18, 20}, {3, 7, 13, 14, 16, 17, 19, 21}, {24, 9}, {2, 6, 8, 10, 22}]
+2023-11-07 18:18:30,941 - root - INFO - merge_rule2....
+2023-11-07 18:18:31,164 - root - INFO - merging cluster set:[{11}, {15}, {0, 4, 5, 12, 18, 20}, {3, 7, 13, 14, 16, 17, 19, 21}, {24, 9}, {1, 2, 6, 8, 10, 22, 23}]
+2023-11-07 18:18:31,168 - root - INFO - merge_rule2....
+2023-11-07 18:18:31,410 - root - INFO - merging cluster set:[{11}, {0, 4, 5, 12, 18, 20}, {3, 7, 13, 14, 16, 17, 19, 21}, {1, 2, 6, 8, 9, 10, 15, 22, 23, 24}]
+2023-11-07 18:18:31,414 - root - INFO - merge_rule2....
+2023-11-07 18:18:31,657 - root - INFO - merging cluster set:[{0, 4, 5, 12, 18, 20}, {3, 7, 13, 14, 16, 17, 19, 21}, {1, 2, 6, 8, 9, 10, 11, 15, 22, 23, 24}]
+2023-11-07 18:18:31,765 - root - INFO - 为scDML培训构建嵌入网络
+2023-11-07 18:18:31,772 - root - INFO - EmbeddingNet(
+  (actn): ReLU()
+  (fc): Sequential(
+    (0): Linear(in_features=1000, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=32, bias=True)
+  )
+)
+2023-11-07 18:18:31,775 - root - INFO - 构建嵌入网络完成…
+2023-11-07 18:18:31,801 - root - INFO - expect_num_cluster为None，使用特征值差距来估计细胞类型......的数量 
+2023-11-07 18:18:32,269 - root - INFO - 最优簇数是 [ 3  4  6  8 12]
+2023-11-07 18:18:32,272 - root - INFO - train scDML(expect_num_cluster=3) with Embedding Net
+2023-11-07 18:18:32,274 - root - INFO - expect_num_cluster=3
+2023-11-07 18:18:32,276 - root - INFO - 利用CPU训练模型
+2023-11-07 18:18:32,282 - root - INFO - use euclidean distance and hard triplet to train model
+2023-11-07 18:18:32,284 - root - INFO - not use earlystopping!!!!
+2023-11-07 18:18:33,478 - root - INFO - epoch=1,number_hard_triplet=48733,loss=1623.9796142578125
+2023-11-07 18:18:34,503 - root - INFO - epoch=2,number_hard_triplet=4898,loss=2510.22216796875
+2023-11-07 18:18:35,417 - root - INFO - epoch=3,number_hard_triplet=1670,loss=1725.7923583984375
+2023-11-07 18:18:36,301 - root - INFO - epoch=4,number_hard_triplet=562,loss=1354.1719970703125
+2023-11-07 18:18:37,179 - root - INFO - epoch=5,number_hard_triplet=197,loss=922.2324829101562
+2023-11-07 18:18:38,061 - root - INFO - epoch=6,number_hard_triplet=214,loss=859.4785766601562
+2023-11-07 18:18:38,933 - root - INFO - epoch=7,number_hard_triplet=112,loss=839.6077270507812
+2023-11-07 18:18:39,800 - root - INFO - epoch=8,number_hard_triplet=120,loss=803.1473388671875
+2023-11-07 18:18:40,677 - root - INFO - epoch=9,number_hard_triplet=155,loss=1230.6549072265625
+2023-11-07 18:18:41,535 - root - INFO - epoch=10,number_hard_triplet=36,loss=441.375244140625
+2023-11-07 18:18:42,397 - root - INFO - epoch=11,number_hard_triplet=34,loss=701.7846069335938
+2023-11-07 18:18:43,267 - root - INFO - epoch=12,number_hard_triplet=178,loss=1492.0323486328125
+2023-11-07 18:18:44,125 - root - INFO - epoch=13,number_hard_triplet=32,loss=565.7816162109375
+2023-11-07 18:18:44,994 - root - INFO - epoch=14,number_hard_triplet=27,loss=744.6895751953125
+2023-11-07 18:18:45,853 - root - INFO - epoch=15,number_hard_triplet=25,loss=477.0552978515625
+2023-11-07 18:18:46,717 - root - INFO - epoch=16,number_hard_triplet=14,loss=355.4226379394531
+2023-11-07 18:18:47,585 - root - INFO - epoch=17,number_hard_triplet=29,loss=1047.4208984375
+2023-11-07 18:18:48,460 - root - INFO - epoch=18,number_hard_triplet=22,loss=797.3327026367188
+2023-11-07 18:18:49,318 - root - INFO - epoch=19,number_hard_triplet=76,loss=747.5054321289062
+2023-11-07 18:18:50,178 - root - INFO - epoch=20,number_hard_triplet=18,loss=587.4256591796875
+2023-11-07 18:18:51,050 - root - INFO - epoch=21,number_hard_triplet=64,loss=1110.81884765625
+2023-11-07 18:18:51,914 - root - INFO - epoch=22,number_hard_triplet=19,loss=899.0145263671875
+2023-11-07 18:18:52,775 - root - INFO - epoch=23,number_hard_triplet=56,loss=897.4959716796875
+2023-11-07 18:18:53,636 - root - INFO - epoch=24,number_hard_triplet=38,loss=266.985107421875
+2023-11-07 18:18:54,494 - root - INFO - epoch=25,number_hard_triplet=5,loss=226.97169494628906
+2023-11-07 18:18:55,357 - root - INFO - epoch=26,number_hard_triplet=46,loss=1405.8914794921875
+2023-11-07 18:18:56,212 - root - INFO - epoch=27,number_hard_triplet=11,loss=476.3122863769531
+2023-11-07 18:18:57,069 - root - INFO - epoch=28,number_hard_triplet=102,loss=1087.84326171875
+2023-11-07 18:18:57,931 - root - INFO - epoch=29,number_hard_triplet=10,loss=493.8489685058594
+2023-11-07 18:18:58,800 - root - INFO - epoch=30,number_hard_triplet=8,loss=685.8397827148438
+2023-11-07 18:18:59,658 - root - INFO - epoch=31,number_hard_triplet=10,loss=271.2673034667969
+2023-11-07 18:19:00,521 - root - INFO - epoch=32,number_hard_triplet=42,loss=1318.4395751953125
+2023-11-07 18:19:01,379 - root - INFO - epoch=33,number_hard_triplet=4,loss=110.18538665771484
+2023-11-07 18:19:02,240 - root - INFO - epoch=34,number_hard_triplet=8,loss=621.9491577148438
+2023-11-07 18:19:03,095 - root - INFO - epoch=35,number_hard_triplet=1,loss=101.3739242553711
+2023-11-07 18:19:03,968 - root - INFO - epoch=36,number_hard_triplet=23,loss=1143.940185546875
+2023-11-07 18:19:04,817 - root - INFO - epoch=37,number_hard_triplet=1,loss=0.8995605707168579
+2023-11-07 18:19:05,681 - root - INFO - epoch=38,number_hard_triplet=3,loss=351.30999755859375
+2023-11-07 18:19:06,541 - root - INFO - epoch=39,number_hard_triplet=27,loss=1233.7413330078125
+2023-11-07 18:19:07,401 - root - INFO - epoch=40,number_hard_triplet=2,loss=360.12823486328125
+2023-11-07 18:19:08,259 - root - INFO - epoch=41,number_hard_triplet=256,loss=1430.3045654296875
+2023-11-07 18:19:09,131 - root - INFO - epoch=42,number_hard_triplet=41,loss=1269.353515625
+2023-11-07 18:19:09,993 - root - INFO - epoch=43,number_hard_triplet=36,loss=1895.9034423828125
+2023-11-07 18:19:10,849 - root - INFO - epoch=44,number_hard_triplet=66,loss=1135.6851806640625
+2023-11-07 18:19:11,712 - root - INFO - epoch=45,number_hard_triplet=3,loss=116.11577606201172
+2023-11-07 18:19:12,603 - root - INFO - epoch=46,number_hard_triplet=3,loss=707.331787109375
+2023-11-07 18:19:13,456 - root - INFO - epoch=47,number_hard_triplet=11,loss=1059.46044921875
+2023-11-07 18:19:14,322 - root - INFO - epoch=48,number_hard_triplet=8,loss=908.7730712890625
+2023-11-07 18:19:15,185 - root - INFO - epoch=49,number_hard_triplet=12,loss=1225.6124267578125
+2023-11-07 18:19:16,038 - root - INFO - epoch=50,number_hard_triplet=5,loss=601.6329956054688
+2023-11-07 18:19:16,895 - root - INFO - epoch=51,number_hard_triplet=8,loss=636.313720703125
+2023-11-07 18:19:17,760 - root - INFO - epoch=52,number_hard_triplet=1,loss=37.965232849121094
+2023-11-07 18:19:18,617 - root - INFO - epoch=53,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:19,463 - root - INFO - epoch=54,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:20,316 - root - INFO - epoch=55,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:21,200 - root - INFO - epoch=56,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:22,248 - root - INFO - epoch=57,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:23,709 - root - INFO - epoch=58,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:24,828 - root - INFO - epoch=59,number_hard_triplet=4,loss=647.2361450195312
+2023-11-07 18:19:25,721 - root - INFO - epoch=60,number_hard_triplet=11,loss=1193.563720703125
+2023-11-07 18:19:26,576 - root - INFO - epoch=61,number_hard_triplet=2,loss=484.0052490234375
+2023-11-07 18:19:27,426 - root - INFO - epoch=62,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:28,275 - root - INFO - epoch=63,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:29,150 - root - INFO - epoch=64,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:30,068 - root - INFO - epoch=65,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:31,045 - root - INFO - epoch=66,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:32,390 - root - INFO - epoch=67,number_hard_triplet=3,loss=679.978759765625
+2023-11-07 18:19:33,251 - root - INFO - epoch=68,number_hard_triplet=35,loss=2166.515380859375
+2023-11-07 18:19:34,106 - root - INFO - epoch=69,number_hard_triplet=50,loss=3568.8955078125
+2023-11-07 18:19:34,959 - root - INFO - epoch=70,number_hard_triplet=15,loss=572.5191040039062
+2023-11-07 18:19:35,821 - root - INFO - epoch=71,number_hard_triplet=7,loss=781.7490234375
+2023-11-07 18:19:36,678 - root - INFO - epoch=72,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:37,531 - root - INFO - epoch=73,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:38,388 - root - INFO - epoch=74,number_hard_triplet=21,loss=1124.88330078125
+2023-11-07 18:19:39,256 - root - INFO - epoch=75,number_hard_triplet=13,loss=2118.336669921875
+2023-11-07 18:19:40,116 - root - INFO - epoch=76,number_hard_triplet=14,loss=880.712158203125
+2023-11-07 18:19:40,988 - root - INFO - epoch=77,number_hard_triplet=2,loss=396.0038146972656
+2023-11-07 18:19:41,852 - root - INFO - epoch=78,number_hard_triplet=2,loss=1300.614013671875
+2023-11-07 18:19:42,707 - root - INFO - epoch=79,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:43,565 - root - INFO - epoch=80,number_hard_triplet=2,loss=801.747802734375
+2023-11-07 18:19:44,432 - root - INFO - epoch=81,number_hard_triplet=31,loss=2919.919189453125
+2023-11-07 18:19:45,289 - root - INFO - epoch=82,number_hard_triplet=2,loss=461.78497314453125
+2023-11-07 18:19:46,142 - root - INFO - epoch=83,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:46,994 - root - INFO - epoch=84,number_hard_triplet=12,loss=307.753662109375
+2023-11-07 18:19:47,851 - root - INFO - epoch=85,number_hard_triplet=1,loss=48.374900817871094
+2023-11-07 18:19:48,716 - root - INFO - epoch=86,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:49,571 - root - INFO - epoch=87,number_hard_triplet=3,loss=857.640625
+2023-11-07 18:19:50,433 - root - INFO - epoch=88,number_hard_triplet=11,loss=1576.5316162109375
+2023-11-07 18:19:51,291 - root - INFO - epoch=89,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:52,148 - root - INFO - epoch=90,number_hard_triplet=1,loss=46.891990661621094
+2023-11-07 18:19:53,027 - root - INFO - epoch=91,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:53,983 - root - INFO - epoch=92,number_hard_triplet=2,loss=851.7546997070312
+2023-11-07 18:19:54,842 - root - INFO - epoch=93,number_hard_triplet=6,loss=604.9617309570312
+2023-11-07 18:19:55,699 - root - INFO - epoch=94,number_hard_triplet=13,loss=2902.26904296875
+2023-11-07 18:19:56,554 - root - INFO - epoch=95,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:57,414 - root - INFO - epoch=96,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:58,270 - root - INFO - epoch=97,number_hard_triplet=0,loss=0.0
+2023-11-07 18:19:59,137 - root - INFO - epoch=98,number_hard_triplet=0,loss=0.0
+2023-11-07 18:20:00,121 - root - INFO - epoch=99,number_hard_triplet=0,loss=0.0
+2023-11-07 18:20:01,377 - root - INFO - epoch=100,number_hard_triplet=3,loss=703.311767578125
+2023-11-07 18:20:01,379 - root - INFO - scDML training done....
+2023-11-07 18:20:01,381 - root - INFO - extract embedding for dataset with trained network

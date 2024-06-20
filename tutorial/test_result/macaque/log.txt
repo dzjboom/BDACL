@@ -1,0 +1,202 @@
+2024-06-16 20:37:50,274 - root - INFO - 创建日志文件...
+2024-06-16 20:37:50,275 - root - INFO - 创建 Model 对象完成...
+2024-06-16 20:37:50,281 - root - INFO - 正在执行 preprocess() 函数...
+2024-06-16 20:37:50,282 - root - INFO - 模式=unsupervised
+2024-06-16 20:37:50,283 - root - INFO - 聚类方法=louvain
+2024-06-16 20:37:50,285 - root - INFO - 分辨率=3.0
+2024-06-16 20:37:50,287 - root - INFO - 批次键=BATCH
+2024-06-16 20:37:50,331 - root - INFO - Normalize counts per cell(sum=10000.0)
+2024-06-16 20:37:50,351 - root - INFO - Log1p data
+2024-06-16 20:37:50,483 - root - INFO - Select HVG(n_top_genes=1000)
+2024-06-16 20:37:50,792 - root - INFO - Scale batch(scale_value=10.0)
+2024-06-16 20:37:51,151 - root - INFO - Calculate PCA(n_comps=100)
+2024-06-16 20:37:55,824 - root - INFO - Apply louvain clustring(resolution=3.0) initization
+2024-06-16 20:37:55,826 - root - INFO - Number of Cluster =16
+2024-06-16 20:37:55,828 - root - INFO - clusters=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+2024-06-16 20:37:55,831 - root - INFO - 预处理数据集完成。
+2024-06-16 20:37:55,834 - root - INFO - mode=unsupervised
+2024-06-16 20:37:55,899 - root - INFO - K_in=6, K_bw=12
+2024-06-16 20:37:55,900 - root - INFO - 开始计算 KNN 和 MNN 以获取簇之间的相似性。
+2024-06-16 20:37:55,902 - root - INFO - 使用近似方法计算每个批次内的 KNN 对...
+2024-06-16 20:37:55,912 - root - INFO - Calculate KNN pair intra batch...........
+2024-06-16 20:37:55,913 - root - INFO - K=6
+2024-06-16 20:37:55,914 - root - INFO - metric=cosine
+2024-06-16 20:37:55,915 - root - INFO - Processing datasets: (0, 0) = ('Batch1', 'Batch1')
+2024-06-16 20:37:56,262 - root - INFO - There are (24918) KNN pairs when processing (0, 0)=('Batch1', 'Batch1')
+2024-06-16 20:37:56,263 - root - INFO - Processing datasets: (1, 1) = ('Batch2', 'Batch2')
+2024-06-16 20:37:56,552 - root - INFO - There are (20376) KNN pairs when processing (1, 1)=('Batch2', 'Batch2')
+2024-06-16 20:37:56,554 - root - INFO - Processing datasets: (2, 2) = ('Batch3', 'Batch3')
+2024-06-16 20:37:56,796 - root - INFO - There are (17974) KNN pairs when processing (2, 2)=('Batch3', 'Batch3')
+2024-06-16 20:37:56,797 - root - INFO - Processing datasets: (3, 3) = ('Batch4', 'Batch4')
+2024-06-16 20:37:56,996 - root - INFO - There are (16254) KNN pairs when processing (3, 3)=('Batch4', 'Batch4')
+2024-06-16 20:37:56,998 - root - INFO - Processing datasets: (4, 4) = ('Batch5', 'Batch5')
+2024-06-16 20:37:57,202 - root - INFO - There are (14634) KNN pairs when processing (4, 4)=('Batch5', 'Batch5')
+2024-06-16 20:37:57,203 - root - INFO - Processing datasets: (5, 5) = ('Batch6', 'Batch6')
+2024-06-16 20:37:57,313 - root - INFO - There are (7730) KNN pairs when processing (5, 5)=('Batch6', 'Batch6')
+2024-06-16 20:37:57,314 - root - INFO - BDACL finds (101886) KNN pairs in dataset finally
+2024-06-16 20:37:57,660 - root - INFO - 使用近似方法计算批次之间的 MNN 对...
+2024-06-16 20:37:57,669 - root - INFO - Calculate MNN pair inter batch...........
+2024-06-16 20:37:57,673 - root - INFO - K=12
+2024-06-16 20:37:57,674 - root - INFO - metric=cosine
+2024-06-16 20:37:57,675 - root - INFO - Processing datasets: (0, 1) = ('Batch1', 'Batch2')
+2024-06-16 20:37:58,035 - root - INFO - There are (21666) MNN pairs when processing (0, 1)=('Batch1', 'Batch2')
+2024-06-16 20:37:58,037 - root - INFO - Processing datasets: (0, 2) = ('Batch1', 'Batch3')
+2024-06-16 20:37:58,378 - root - INFO - There are (18668) MNN pairs when processing (0, 2)=('Batch1', 'Batch3')
+2024-06-16 20:37:58,379 - root - INFO - Processing datasets: (0, 3) = ('Batch1', 'Batch4')
+2024-06-16 20:37:58,675 - root - INFO - There are (17558) MNN pairs when processing (0, 3)=('Batch1', 'Batch4')
+2024-06-16 20:37:58,677 - root - INFO - Processing datasets: (0, 4) = ('Batch1', 'Batch5')
+2024-06-16 20:37:58,985 - root - INFO - There are (18160) MNN pairs when processing (0, 4)=('Batch1', 'Batch5')
+2024-06-16 20:37:58,986 - root - INFO - Processing datasets: (0, 5) = ('Batch1', 'Batch6')
+2024-06-16 20:37:59,240 - root - INFO - There are (12796) MNN pairs when processing (0, 5)=('Batch1', 'Batch6')
+2024-06-16 20:37:59,242 - root - INFO - Processing datasets: (1, 2) = ('Batch2', 'Batch3')
+2024-06-16 20:37:59,543 - root - INFO - There are (17578) MNN pairs when processing (1, 2)=('Batch2', 'Batch3')
+2024-06-16 20:37:59,545 - root - INFO - Processing datasets: (1, 3) = ('Batch2', 'Batch4')
+2024-06-16 20:37:59,821 - root - INFO - There are (17000) MNN pairs when processing (1, 3)=('Batch2', 'Batch4')
+2024-06-16 20:37:59,823 - root - INFO - Processing datasets: (1, 4) = ('Batch2', 'Batch5')
+2024-06-16 20:38:00,131 - root - INFO - There are (16854) MNN pairs when processing (1, 4)=('Batch2', 'Batch5')
+2024-06-16 20:38:00,132 - root - INFO - Processing datasets: (1, 5) = ('Batch2', 'Batch6')
+2024-06-16 20:38:00,385 - root - INFO - There are (12342) MNN pairs when processing (1, 5)=('Batch2', 'Batch6')
+2024-06-16 20:38:00,387 - root - INFO - Processing datasets: (2, 3) = ('Batch3', 'Batch4')
+2024-06-16 20:38:00,707 - root - INFO - There are (14030) MNN pairs when processing (2, 3)=('Batch3', 'Batch4')
+2024-06-16 20:38:00,709 - root - INFO - Processing datasets: (2, 4) = ('Batch3', 'Batch5')
+2024-06-16 20:38:01,085 - root - INFO - There are (14872) MNN pairs when processing (2, 4)=('Batch3', 'Batch5')
+2024-06-16 20:38:01,089 - root - INFO - Processing datasets: (2, 5) = ('Batch3', 'Batch6')
+2024-06-16 20:38:01,382 - root - INFO - There are (10902) MNN pairs when processing (2, 5)=('Batch3', 'Batch6')
+2024-06-16 20:38:01,384 - root - INFO - Processing datasets: (3, 4) = ('Batch4', 'Batch5')
+2024-06-16 20:38:01,716 - root - INFO - There are (13052) MNN pairs when processing (3, 4)=('Batch4', 'Batch5')
+2024-06-16 20:38:01,718 - root - INFO - Processing datasets: (3, 5) = ('Batch4', 'Batch6')
+2024-06-16 20:38:01,944 - root - INFO - There are (9406) MNN pairs when processing (3, 5)=('Batch4', 'Batch6')
+2024-06-16 20:38:01,946 - root - INFO - Processing datasets: (4, 5) = ('Batch5', 'Batch6')
+2024-06-16 20:38:02,157 - root - INFO - There are (10182) MNN pairs when processing (4, 5)=('Batch5', 'Batch6')
+2024-06-16 20:38:02,158 - root - INFO - BDACL finds (225066) MNN pairs in dataset finally
+2024-06-16 20:38:02,694 - root - INFO - 查找所有最近邻居完成。
+2024-06-16 20:38:02,696 - root - INFO - 计算簇之间的相似性矩阵。
+2024-06-16 20:38:02,794 - root - INFO - delete inner edge which link same cluster
+2024-06-16 20:38:02,796 - root - INFO - 25256 knn pair in batch link different cluster
+2024-06-16 20:38:02,944 - root - INFO - delete inner edge which link same cluster
+2024-06-16 20:38:02,946 - root - INFO - 78772 mnn pair in batch link different cluster
+2024-06-16 20:38:02,948 - root - INFO - ===================================================================================
+2024-06-16 20:38:02,950 - root - INFO - NN pair ratio(number of MNN pairs/number of KNN pairs)=3.1189420335761797
+2024-06-16 20:38:02,953 - root - INFO - ===================================================================================
+2024-06-16 20:38:02,959 - root - INFO - 将相似性矩阵保存到文件中...
+2024-06-16 20:38:02,964 - root - INFO - 将 nn 配对矩阵保存到文件中。
+2024-06-16 20:38:02,967 - root - INFO - 完成相似性矩阵计算。
+2024-06-16 20:38:03,060 - root - INFO - BDACL merge cluster with rule2....
+2024-06-16 20:38:03,066 - root - INFO - merge_rule2....
+2024-06-16 20:38:03,245 - root - INFO - merging cluster set:[{3}, {7}, {8}, {0, 1, 12, 9}, {10, 4, 13, 6}, {11, 5, 15}, {2, 14}]
+2024-06-16 20:38:03,247 - root - INFO - 为BDACL培训构建嵌入网络
+2024-06-16 20:38:03,289 - root - INFO - EmbeddingNet(
+  (actn): ReLU()
+  (fc): Sequential(
+    (0): Linear(in_features=1000, out_features=256, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=256, out_features=32, bias=True)
+  )
+)
+2024-06-16 20:38:03,291 - root - INFO - 构建嵌入网络完成…
+2024-06-16 20:38:03,292 - root - INFO - train BDACL(expect_num_cluster=7) with Embedding Net
+2024-06-16 20:38:03,295 - root - INFO - expect_num_cluster=7
+2024-06-16 20:38:03,297 - root - INFO - 利用CPU训练模型
+2024-06-16 20:38:03,404 - root - INFO - not use earlystopping!!!!
+2024-06-16 20:38:06,668 - root - INFO - epoch=1,loss=533.49
+2024-06-16 20:38:08,216 - root - INFO - epoch=2,loss=301.76
+2024-06-16 20:38:09,877 - root - INFO - epoch=3,loss=222.56
+2024-06-16 20:38:11,527 - root - INFO - epoch=4,loss=163.01
+2024-06-16 20:38:13,192 - root - INFO - epoch=5,loss=158.67
+2024-06-16 20:38:14,822 - root - INFO - epoch=6,loss=122.76
+2024-06-16 20:38:16,429 - root - INFO - epoch=7,loss=109.62
+2024-06-16 20:38:18,007 - root - INFO - epoch=8,loss=99.91
+2024-06-16 20:38:19,582 - root - INFO - epoch=9,loss=97.0
+2024-06-16 20:38:21,192 - root - INFO - epoch=10,loss=62.09
+2024-06-16 20:38:22,723 - root - INFO - epoch=11,loss=57.59
+2024-06-16 20:38:24,306 - root - INFO - epoch=12,loss=48.72
+2024-06-16 20:38:25,837 - root - INFO - epoch=13,loss=40.71
+2024-06-16 20:38:27,473 - root - INFO - epoch=14,loss=33.64
+2024-06-16 20:38:29,181 - root - INFO - epoch=15,loss=30.61
+2024-06-16 20:38:30,964 - root - INFO - epoch=16,loss=20.54
+2024-06-16 20:38:32,489 - root - INFO - epoch=17,loss=16.06
+2024-06-16 20:38:33,905 - root - INFO - epoch=18,loss=15.57
+2024-06-16 20:38:35,370 - root - INFO - epoch=19,loss=12.28
+2024-06-16 20:38:36,777 - root - INFO - epoch=20,loss=9.07
+2024-06-16 20:38:38,170 - root - INFO - epoch=21,loss=9.71
+2024-06-16 20:38:39,544 - root - INFO - epoch=22,loss=6.5
+2024-06-16 20:38:40,945 - root - INFO - epoch=23,loss=7.04
+2024-06-16 20:38:42,326 - root - INFO - epoch=24,loss=6.56
+2024-06-16 20:38:43,696 - root - INFO - epoch=25,loss=6.76
+2024-06-16 20:38:45,040 - root - INFO - epoch=26,loss=5.91
+2024-06-16 20:38:46,365 - root - INFO - epoch=27,loss=5.53
+2024-06-16 20:38:47,708 - root - INFO - epoch=28,loss=3.97
+2024-06-16 20:38:49,029 - root - INFO - epoch=29,loss=3.24
+2024-06-16 20:38:50,336 - root - INFO - epoch=30,loss=2.79
+2024-06-16 20:38:51,658 - root - INFO - epoch=31,loss=5.21
+2024-06-16 20:38:52,972 - root - INFO - epoch=32,loss=5.97
+2024-06-16 20:38:54,260 - root - INFO - epoch=33,loss=3.33
+2024-06-16 20:38:55,575 - root - INFO - epoch=34,loss=3.52
+2024-06-16 20:38:56,904 - root - INFO - epoch=35,loss=2.6
+2024-06-16 20:38:58,193 - root - INFO - epoch=36,loss=3.18
+2024-06-16 20:38:59,461 - root - INFO - epoch=37,loss=3.72
+2024-06-16 20:39:00,799 - root - INFO - epoch=38,loss=2.72
+2024-06-16 20:39:02,097 - root - INFO - epoch=39,loss=2.35
+2024-06-16 20:39:03,396 - root - INFO - epoch=40,loss=3.03
+2024-06-16 20:39:04,698 - root - INFO - epoch=41,loss=1.81
+2024-06-16 20:39:05,978 - root - INFO - epoch=42,loss=1.94
+2024-06-16 20:39:07,271 - root - INFO - epoch=43,loss=1.8
+2024-06-16 20:39:08,545 - root - INFO - epoch=44,loss=2.27
+2024-06-16 20:39:09,848 - root - INFO - epoch=45,loss=2.54
+2024-06-16 20:39:11,234 - root - INFO - epoch=46,loss=2.05
+2024-06-16 20:39:12,635 - root - INFO - epoch=47,loss=1.59
+2024-06-16 20:39:14,001 - root - INFO - epoch=48,loss=0.88
+2024-06-16 20:39:15,441 - root - INFO - epoch=49,loss=1.46
+2024-06-16 20:39:16,764 - root - INFO - epoch=50,loss=2.94
+2024-06-16 20:39:18,040 - root - INFO - epoch=51,loss=1.8
+2024-06-16 20:39:19,321 - root - INFO - epoch=52,loss=0.93
+2024-06-16 20:39:20,604 - root - INFO - epoch=53,loss=1.31
+2024-06-16 20:39:21,893 - root - INFO - epoch=54,loss=1.78
+2024-06-16 20:39:23,191 - root - INFO - epoch=55,loss=1.88
+2024-06-16 20:39:24,447 - root - INFO - epoch=56,loss=1.18
+2024-06-16 20:39:25,734 - root - INFO - epoch=57,loss=0.96
+2024-06-16 20:39:27,097 - root - INFO - epoch=58,loss=1.33
+2024-06-16 20:39:28,518 - root - INFO - epoch=59,loss=0.82
+2024-06-16 20:39:29,822 - root - INFO - epoch=60,loss=1.5
+2024-06-16 20:39:31,176 - root - INFO - epoch=61,loss=0.99
+2024-06-16 20:39:32,580 - root - INFO - epoch=62,loss=1.11
+2024-06-16 20:39:33,923 - root - INFO - epoch=63,loss=1.29
+2024-06-16 20:39:35,183 - root - INFO - epoch=64,loss=1.87
+2024-06-16 20:39:36,431 - root - INFO - epoch=65,loss=0.35
+2024-06-16 20:39:37,688 - root - INFO - epoch=66,loss=0.73
+2024-06-16 20:39:38,954 - root - INFO - epoch=67,loss=1.59
+2024-06-16 20:39:40,186 - root - INFO - epoch=68,loss=1.14
+2024-06-16 20:39:41,435 - root - INFO - epoch=69,loss=0.35
+2024-06-16 20:39:42,692 - root - INFO - epoch=70,loss=1.32
+2024-06-16 20:39:43,965 - root - INFO - epoch=71,loss=0.98
+2024-06-16 20:39:45,262 - root - INFO - epoch=72,loss=1.32
+2024-06-16 20:39:46,586 - root - INFO - epoch=73,loss=1.41
+2024-06-16 20:39:47,849 - root - INFO - epoch=74,loss=1.02
+2024-06-16 20:39:49,073 - root - INFO - epoch=75,loss=1.12
+2024-06-16 20:39:50,295 - root - INFO - epoch=76,loss=1.69
+2024-06-16 20:39:51,570 - root - INFO - epoch=77,loss=0.91
+2024-06-16 20:39:52,899 - root - INFO - epoch=78,loss=1.29
+2024-06-16 20:39:54,117 - root - INFO - epoch=79,loss=0.47
+2024-06-16 20:39:55,352 - root - INFO - epoch=80,loss=0.8
+2024-06-16 20:39:56,626 - root - INFO - epoch=81,loss=0.99
+2024-06-16 20:39:57,866 - root - INFO - epoch=82,loss=0.52
+2024-06-16 20:39:59,145 - root - INFO - epoch=83,loss=1.14
+2024-06-16 20:40:00,423 - root - INFO - epoch=84,loss=0.95
+2024-06-16 20:40:01,671 - root - INFO - epoch=85,loss=0.41
+2024-06-16 20:40:02,920 - root - INFO - epoch=86,loss=1.28
+2024-06-16 20:40:04,161 - root - INFO - epoch=87,loss=0.41
+2024-06-16 20:40:05,372 - root - INFO - epoch=88,loss=0.52
+2024-06-16 20:40:06,573 - root - INFO - epoch=89,loss=0.85
+2024-06-16 20:40:07,816 - root - INFO - epoch=90,loss=0.87
+2024-06-16 20:40:09,041 - root - INFO - epoch=91,loss=1.22
+2024-06-16 20:40:10,264 - root - INFO - epoch=92,loss=0.72
+2024-06-16 20:40:11,513 - root - INFO - epoch=93,loss=0.88
+2024-06-16 20:40:12,722 - root - INFO - epoch=94,loss=0.95
+2024-06-16 20:40:13,907 - root - INFO - epoch=95,loss=0.47
+2024-06-16 20:40:15,159 - root - INFO - epoch=96,loss=0.92
+2024-06-16 20:40:16,356 - root - INFO - epoch=97,loss=0.81
+2024-06-16 20:40:17,598 - root - INFO - epoch=98,loss=0.86
+2024-06-16 20:40:18,841 - root - INFO - epoch=99,loss=1.7
+2024-06-16 20:40:20,068 - root - INFO - epoch=100,loss=0.61
+2024-06-16 20:40:20,070 - root - INFO - BDACL training done....
+2024-06-16 20:40:20,071 - root - INFO - extract embedding for dataset with trained network
